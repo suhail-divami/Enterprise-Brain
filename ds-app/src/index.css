@@ -1,0 +1,127 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand */
+  --color-primary: #6459fe;
+  --color-primary-hover: #5149de;
+  --color-primary-active: #3c2cb8;
+  --color-primary-subtle: rgba(100,89,254,0.08);
+
+  /* Semantic */
+  --color-destructive: #e94235;
+  --color-destructive-subtle: #fdecea;
+  --color-warning: #ffba00;
+  --color-warning-subtle: #fff8e1;
+  --color-success: #34a853;
+  --color-success-subtle: #e8f5e9;
+  --color-success-fg: #17b26a;
+  --color-info: #4285f4;
+  --color-info-subtle: #e8f0fe;
+
+  /* Surfaces */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #f3f4f6;
+  --color-bg-active: #fafafa;
+  --color-bg-inset: rgba(10,18,23,0.05);
+  --color-bg-overlay: rgba(10,13,18,0.5);
+  --color-sidebar-bg: #f0f0ee;
+
+  /* Text */
+  --color-fg-primary: rgba(10,18,23,0.9);
+  --color-fg-secondary: rgba(10,18,23,0.6);
+  --color-fg-tertiary: rgba(10,18,23,0.4);
+  --color-fg-disabled: rgba(10,18,23,0.25);
+  --color-fg-on-color: #ffffff;
+
+  /* Borders */
+  --color-border-primary: #d1d5db;
+  --color-border-secondary: #e9eaeb;
+  --color-border-subtle: rgba(10,18,23,0.05);
+  --color-border-focus: #6459fe;
+  --color-border-error: #e94235;
+
+  /* Shadows */
+  --shadow-xs: 0px 1px 2px 0px rgba(10,13,18,0.05);
+  --shadow-sm: 0px 1px 3px 0px rgba(10,13,18,0.10);
+  --shadow-md: 0px 4px 6px -1px rgba(10,13,18,0.10);
+  --shadow-lg: 0px 10px 15px -3px rgba(10,13,18,0.10);
+
+  /* Radius */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 9999px;
+  --radius-input: 32px;
+  --radius-sidebar: 99px;
+
+  /* Spacing */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+}
+
+[data-theme="dark"] {
+  --color-primary: #8282ff;
+  --color-primary-hover: #6868f7;
+  --color-primary-subtle: rgba(130,130,255,0.12);
+  --color-sidebar-bg: #1a1c22;
+  --color-bg-primary: #0c0e12;
+  --color-bg-secondary: #141720;
+  --color-bg-tertiary: #1c2028;
+  --color-bg-active: #1e2230;
+  --color-bg-inset: rgba(255,255,255,0.05);
+  --color-bg-overlay: rgba(0,0,0,0.70);
+  --color-fg-primary: rgba(240,242,245,0.95);
+  --color-fg-secondary: rgba(200,204,212,0.80);
+  --color-fg-tertiary: rgba(140,144,154,0.70);
+  --color-fg-disabled: rgba(42,47,58,0.80);
+  --color-border-primary: #2a2f3a;
+  --color-border-secondary: #1f2430;
+  --color-border-subtle: rgba(255,255,255,0.05);
+  --color-border-focus: #8282ff;
+  --shadow-xs: 0px 1px 2px 0px rgba(0,0,0,0.30);
+  --shadow-sm: 0px 1px 3px 0px rgba(0,0,0,0.40);
+  --shadow-md: 0px 4px 6px -1px rgba(0,0,0,0.40);
+  --shadow-lg: 0px 10px 15px -3px rgba(0,0,0,0.40);
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0 }
+  100% { background-position: 400px 0 }
+}
+@keyframes spin { to { transform: rotate(360deg) } }
+@keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0 } }
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8 }
+  100% { transform: scale(1.5); opacity: 0 }
+}
+
+.spinner { animation: spin 0.8s linear infinite; }
+.blink-cursor::after { content: '|'; animation: blink 1s step-end infinite; }
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-fg-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border-primary); border-radius: 9999px; }

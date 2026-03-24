@@ -1,0 +1,68 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: ['class', '[data-theme="dark"]'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary:         'var(--color-primary)',
+        'primary-hover': 'var(--color-primary-hover)',
+        destructive:     'var(--color-destructive)',
+        success:         'var(--color-success)',
+        warning:         'var(--color-warning)',
+        info:            'var(--color-info)',
+        'bg-primary':    'var(--color-bg-primary)',
+        'bg-secondary':  'var(--color-bg-secondary)',
+        'bg-tertiary':   'var(--color-bg-tertiary)',
+        'bg-active':     'var(--color-bg-active)',
+        'bg-inset':      'var(--color-bg-inset)',
+        'fg-primary':    'var(--color-fg-primary)',
+        'fg-secondary':  'var(--color-fg-secondary)',
+        'fg-tertiary':   'var(--color-fg-tertiary)',
+        'fg-quaternary': 'var(--color-fg-quaternary)',
+        'fg-disabled':   'var(--color-fg-disabled)',
+        'fg-on-color':   'var(--color-fg-on-color)',
+        'border-primary':   'var(--color-border-primary)',
+        'border-secondary': 'var(--color-border-secondary)',
+        'border-focus':     'var(--color-border-focus)',
+        'border-error':     'var(--color-border-error)',
+      },
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+      },
+      fontSize: {
+        xs:    ['10px', { lineHeight: '14px' }],
+        sm:    ['12px', { lineHeight: '16px' }],
+        base:  ['14px', { lineHeight: '19.6px' }],
+        md:    ['16px', { lineHeight: '24px' }],
+        lg:    ['18px', { lineHeight: '28px' }],
+        xl:    ['20px', { lineHeight: '30px' }],
+        '2xl': ['24px', { lineHeight: '32px' }],
+        '3xl': ['30px', { lineHeight: '38px' }],
+        '4xl': ['36px', { lineHeight: '44px' }],
+      },
+      spacing: {
+        xxs: '2px', xs: '4px', sm: '6px', md: '8px',
+        lg: '12px', xl: '16px', '2xl': '20px', '3xl': '24px',
+        '4xl': '32px', '5xl': '40px', '6xl': '48px', '7xl': '64px',
+      },
+      borderRadius: {
+        none: '0', xs: '2px', sm: '6px', md: '8px',
+        lg: '12px', xl: '16px', '2xl': '20px', full: '9999px',
+      },
+      boxShadow: {
+        xs: '0px 1px 2px 0px rgba(10,13,18,0.05)',
+        sm: '0px 1px 3px 0px rgba(10,13,18,0.10)',
+        md: '0px 4px 6px -1px rgba(10,13,18,0.10)',
+        lg: '0px 10px 15px -3px rgba(10,13,18,0.10)',
+        xl: '0px 20px 25px -5px rgba(10,13,18,0.10)',
+      },
+      zIndex: {
+        dropdown: '1000', sticky: '1100', overlay: '1200',
+        modal: '1300', toast: '1400', tooltip: '1500',
+      },
+    },
+  },
+  plugins: [],
+}
